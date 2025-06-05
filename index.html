@@ -17,6 +17,11 @@
         #menu-toggle:checked + label + div#menu-links {
             display: flex;
         }
+        .nav-link-active {
+            border-bottom-width: 2px;
+            border-bottom-color: #3b82f6;
+            color: #3b82f6;
+        }
     </style>
 
 </head>
@@ -34,10 +39,10 @@
             <div id="menu-links" class="hidden w-full bg-white shadow-md py-2 flex-col
                         md:static md:flex md:w-auto md:shadow-none md:bg-transparent md:py-0 
                         md:flex-row md:items-center md:space-x-4">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="index.html" class="block w-full text-center md:w-auto text-gray-600 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link nav-link-active">Home</a>
+                <a href="services.html" class="block w-full text-center md:w-auto text-gray-600 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Services</a>
+                <a href="about.html" class="block w-full text-center md:w-auto text-gray-600 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">About Us</a>
+                <a href="contact.html" class="block w-full text-center md:w-auto text-gray-600 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Contact Us</a>
             </div>
         </div>
     </nav>
