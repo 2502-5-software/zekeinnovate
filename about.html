@@ -11,9 +11,39 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        #menu-toggle {
+            display: none;
+        }
+        #menu-toggle:checked + label + div#menu-links {
+            display: flex;
+        }
+        .nav-link-active {
+            border-bottom-width: 2px;
+            border-bottom-color: #3b82f6;
+            color: #3b82f6;
+        }
     </style>
 </head>
-<body>
-    
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+    <nav class="bg-white shadow-md sticky top-0 w-full z-20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Zekeinnovate</a>
+            <input type="checkbox"  id="menu-toggle" class="peer">
+
+            <label for="menu-toggle" class="md:hidden cursor-pointer p-2 rounded-md hover:bg-gray-100">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </label>
+            <div id="menu-links" class="hidden w-full bg-white shadow-md py-2 flex-col
+                        md:static md:flex md:w-auto md:shadow-none md:bg-transparent md:py-0 
+                        md:flex-row md:items-center md:space-x-4">
+                <a href="index.html" class="block w-full text-center md:w-auto text-gray-600 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Home</a>
+                <a href="services.html" class="block w-full text-center md:w-auto text-gray-600 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Services</a>
+                <a href="about.html" class="block w-full text-center md:w-auto text-gray-600 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link nav-link-active">About Us</a>
+                <a href="contact.html" class="block w-full text-center md:w-auto text-gray-600 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Contact Us</a>
+            </div>
+        </div>
+    </nav>
 </body>
 </html>
